@@ -7,18 +7,17 @@ body {
     font-family: 'Inter', sans-serif;
     height: 100dvh;
 }
-
-/* Estilos para la barra de navegación */
-.navbar {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    background-color: grey;
-    padding: 10px;
-    position: fixed; 
-    top: 0;
-    width: 100%;
-    height: 5rem;
+/* NavBar */
+  .navbar {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      background-color: grey;
+      padding: 10px;
+      position: fixed; 
+      top: 0;
+      width: 100%;
+      height: 5rem;
   }
   .navbar ul {
     display: flex;
@@ -45,7 +44,7 @@ body {
     color: white;
     padding-right: 30px;
   }
-  /* Estilos para el panel lateral izquierdo */
+  /* SideBar */
   #sidebar {
     background-color: lightgray;
     width: 300px;
@@ -87,16 +86,14 @@ body {
     color: rgb(23, 12, 126);
     text-decoration-line: underline;
   }
-  
-  /* Estilos para el área de contenido principal */
+  /* Content */
   .content {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 320px; /* Toma en cuenta el ancho del panel lateral + padding */
+    margin-left: 320px;
     padding: 20px;
   }
   #canvas {
-   
     margin: 190px 0 0 300px;
     width: 600px;
     height: 450px;
@@ -111,8 +108,7 @@ body {
     width: 100%;
     height: 1vh;
   }
-  
-
+  /* DialogSection */
   #dialogSection {
     display: none;
     position: absolute;
@@ -127,13 +123,11 @@ body {
     width: 600px;
     height: 100px;
   }
-  
   #dialogSection p {
     color: aquamarine;
     font-size: 18px;
     margin-bottom: 20px;
   }
-  
   #dialogSection button {
     color: rgb(23, 12, 126);
     font-weight: bolder;
@@ -141,6 +135,7 @@ body {
     margin-right: 10px;
     border-bottom: 5px;
   }
+  /* Footer */
   footer {
     display: flex;
     align-items: center;
