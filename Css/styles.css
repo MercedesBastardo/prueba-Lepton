@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    height: 100dvh;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: grey;
+    padding: 10px;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    height: 5rem;
+  }
+  .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    gap: 30px;
+    padding-right: 50px;
+  }
+  .navbar ul li a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  .navbar ul li a:hover {
+    color: aquamarine;
+    text-decoration-line: underline;
+  }
+  .navbar button {
+    font-size: 30px;
+    border: none;
+    background-color: grey;
+    color: white;
+    padding-right: 30px;
+  }
+  /* Estilos para el panel lateral izquierdo */
+  #sidebar {
+    background-color: lightgray;
+    width: 300px;
+    height: 100dvh;
+    padding: 20px;
+    float: left;
+  }
+  #sidebar button {
+    padding: 100px 10px 0 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 90%;
+    border: none;
+    background-color: lightgray;
+  }
+  #sidebar button i {
+    text-align: end;
+    font-size: 30px;
+    color: rgb(87, 78, 162);
+  }
+  #sidebar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    text-decoration: none;
+    gap: 30px;
+    padding-top: 100px;
+    padding-right: 50px;
+  }
+  #sidebar ul li a {
+    color: rgb(87, 78, 162);
+    font-size: 25px;
+    text-decoration: none;
+  }
+  #sidebar ul li a:hover {
+    color: rgb(23, 12, 126);
+    text-decoration-line: underline;
+  }
+  
+  /* Estilos para el área de contenido principal */
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 320px; /* Toma en cuenta el ancho del panel lateral + padding */
+    padding: 20px;
+  }
+  #canvas {
+   
+    margin: 190px 0 0 300px;
+    width: 600px;
+    height: 450px;
+    border: 3px solid rgb(87, 78, 162) ;
+    border-radius: 20px;
+  }
+  .content .change {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 1vh;
+  }
+  
+
+  #dialogSection {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to bottom, transparent, rgb(244, 243, 246));
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    width: 600px;
+    height: 100px;
+  }
+  
+  #dialogSection p {
+    color: aquamarine;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  #dialogSection button {
+    color: rgb(23, 12, 126);
+    font-weight: bolder;
+    width: 70px;
+    margin-right: 10px;
+    border-bottom: 5px;
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+  }
+  footer h3 {
+    color: rgb(23, 12, 126);
+  }

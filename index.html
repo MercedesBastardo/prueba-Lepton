@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Lepton</title>
+    <link rel="stylesheet" href="./Css/styles.css">
+    <script src="https://kit.fontawesome.com/1015471fe6.js" crossorigin="anonymous"></script>
+    <script src="typeScript.js"></script>
+</head>
+<body>
+  <header>   
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Acerca de</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <button onclick="openDialog()" id="openDialogBtn"><i class="fa-regular fa-circle-xmark"></i></button>
+    </nav>
+  </header>
+  <div class="container">  
+    <aside id="sidebar">
+      <button onclick= "closeSideBar()" id="btnClose"><i class="fa-solid fa-circle-xmark"></i></button>
+      <ul>    
+        <li><a href="#">Opción 1</a></li>
+        <li><a href="#">Opción 2</a></li>
+        <li><a href="#">Opción 3</a></li>
+      </ul>
+    </aside>
+    <main class="content">
+      <canvas onmouseover="mouseOver()" onmouseout="mouseOut()" id="canvas"> </canvas>  
+    </main>
+    <div id="dialogSection">
+      <p>¿Estás seguro que deseas cerrar la aplicación?</p> 
+      <button onclick="closeDialog()" id="confirmBtn">Cancelar</button>
+      <button onclick="cancelDialog()" id="cancelBtn">Aceptar</button>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var closeDialog= () => {
+        var confirmBtn = document.getElementById('confirmBtn');
+        var dialogSection = document.getElementById('dialogSection');
+      return  dialogSection.style.display = "none"
+    }
+    confirmBtn.addEventListener('click', () => { closeDialog });
+    var cancelDialog= () => {
+      return window.close();
+    }
+    var cancelBtn = document.getElementById('cancelBtn');
+    cancelBtn.addEventListener('click', () => { cancelDialog });
+  </script>
+</body>
+<footer>
+  <h3><span>Autor:</span> Mercedes Bastardo</h3>
+</footer>
+</html>
