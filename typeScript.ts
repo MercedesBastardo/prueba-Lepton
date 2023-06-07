@@ -25,9 +25,11 @@ var mouseOver = () => {
     if (text) {
       text.font = "bold 20px arial";
       text.textAlign = 'start';
-      text.textBaseline = 'middle'
-      text.fillStyle = 'aquamarine';
-      text.fillText("El mouse esta parado aqui!",30,75);
+      text.textBaseline = 'middle';
+      text.fillStyle = 'blueviolet';
+      text.fillText("Insisitir 😄",90,50);
+      text.fillText("Persistir 😅",85,75);
+      text.fillText("y nunca Desistir 💪",55,100);
     }
     canvas?.addEventListener('mouseover', () => { this });
   return text

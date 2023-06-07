@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba Lepton</title>
+    <title>Prueba Técnica</title>
     <link rel="stylesheet" href="./Css/styles.css">
     <script src="https://kit.fontawesome.com/1015471fe6.js" crossorigin="anonymous"></script>
     <script src="typeScript.js"></script>
+    
 </head>
 <body>
   <header>   
     <nav class="navbar">
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Acerca de</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><button onclick="start()" id="start">Inicio</button></li>
+        <li><button onclick="about()" id="aboutMe">Acerca de mi</button></li>
+        <li><button onclick="contact()" id="contact">Contacto</button></li>
       </ul>
       <button onclick="openDialog()" id="openDialogBtn"><i class="fa-regular fa-circle-xmark"></i></button>
     </nav>
@@ -24,11 +25,88 @@
     <aside id="sidebar">
       <button onclick= "closeSideBar()" id="btnClose"><i class="fa-solid fa-circle-xmark"></i></button>
       <ul>    
-        <li><a href="#">Opción 1</a></li>
-        <li><a href="#">Opción 2</a></li>
-        <li><a href="#">Opción 3</a></li>
+        <li> <button onclick="optionOne()" id="optionOne">Opción 1</button></li>
+        <li><button onclick="optionTwo()" id="optionTwo">Opción 2</button></li>
+        <li><button onclick="optionTree()" id="optionTree">Opción 3</button></li>
       </ul>
+      <h3><span>Autor:</span> Mercedes Bastardo 💝 </h3>
     </aside>
+
+
+    <div class="classOptionOne">
+      <button onclick= "closeOptionOne()" id="btnClose"><i class="fa-solid fa-circle-xmark"></i></button>
+      <div class="optionsOneContent">
+        <img src="./img/desanimada.jpg" alt="">
+        <ul>
+          <li>Intentarlo, quejarse, volverlo a intentar, seguirse quejando.</li>
+          <li>Culpar a los demás de nuestros fracasos.</li>
+          <li>Pretender tener el mejor empleo sin aportar por lo menos una minima sonrisa a la sociedad.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="classOptionTwo">
+      <button onclick= "closeOptionTwo()" id="btnCloseTwo"><i class="fa-solid fa-circle-xmark"></i></button>
+      <div class="optionsTwoContent">
+        <img src=".//img/option 2.jpg" alt="">
+        <ul>
+          <li>Volver a donde estabas antes de decidir dedicarte a esto.</li>
+          <li>Seguir en tu zona de confort.</li>
+          <li>O, simplemente buscar otro camino.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="classOptionTree">
+      <button onclick= "closeOptionTree()" id="btnCloseTree"><i class="fa-solid fa-circle-xmark"></i></button>
+      <div class="optionsTreeContent">
+        <img src="./img/exitosoooo.jpg" alt="">
+        <ul>
+          <li>Levantarte todos los días con el mejor animo del mundo.</li>
+          <li>Tomarte una taza de café, té o bebida de tu preferencia.</li>
+          <li>Seguir buscando empleo una y otra vez, hasta que llegue <br> 
+            ese reclutador con el que tendrás Feeling, tu empleo soñado <br>
+            y tus objetivos logrados.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="classStart">
+      <button onclick= "closeStart()" id="btnCloseStar"><i class="fa-solid fa-circle-xmark"></i></button>
+      <div class="startContent">
+          
+          <img src="./img//persons.jpg" alt="">
+         
+          <ul>
+            <li>Te has preguntado, ¿Cúal fue tu inicio?</li>
+            <li>Del 1 al 10, ¿Donde te encuentras ahora en <br> comparación a cuando empezaste?</li>
+            <li>¿Con cuántas ganas y motivación <br> comenzastes?</li>
+          </ul>
+      </div>
+    </div>
+    <div class="classAboutMe">
+      <button onclick= "closeAboutMe()" id="btnCloseAboutMe"><i class="fa-solid fa-circle-xmark"></i></button>
+      <div class="aboutMeContent">
+        <img src="./img/persona-exitosa.jpg" alt="">
+        <ul>
+          <li>Yo soy maravillos@, unic@, soy activ@.</li>
+          <li>Tengo muy buenos valores que ofrecer a la sociedad.</li>
+          <li>Mis conocimientos estan a la altura de cualquier empresa a la que estoy postulando.</li>
+          <li>Merezco el sueldo pretendido</li>
+          <li>Y soy dign@ de mi empleo soñado.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="classContact">
+      <button onclick= "closeContact()" id="btnCloseContact"><i class="fa-solid fa-circle-xmark"></i></button>
+      <div class="contactContent">
+        <img src="./img/contact.jpg" alt="">
+        <ul>
+          <li>Busca tu a los reclutadores.</li>
+          <li>Ellos estan haciendo su trabajo.</li>
+          <li>Haz tu el tuyo.</li>
+          <li>No lo dejes a la suerte.</li>
+        </ul>
+      </div>
+    </div>
     <main class="content">
       <canvas onmouseover="mouseOver()" onmouseout="mouseOut()" id="canvas"> </canvas>  
     </main>
@@ -38,7 +116,7 @@
       <button onclick="cancelDialog()" id="cancelBtn">Aceptar</button>
     </div>
   </div>
-
+  
   <script type="text/javascript">
     var closeDialog= () => {
         var confirmBtn = document.getElementById('confirmBtn');
@@ -52,8 +130,53 @@
     var cancelBtn = document.getElementById('cancelBtn');
     cancelBtn.addEventListener('click', () => { cancelDialog });
   </script>
+    <script src="options.js"></script>
+    <script>
+      // Inicio de nuestra carrera
+        const StartSel = document.querySelector('.classStart');
+        const btnStart = document.getElementById('start');
+        const btnCloseStart = document.getElementById('btnCloseStart')
+
+        var start = () => {
+          StartSel.style.display= "flex"
+        } 
+        btnStart.addEventListener('click', () => { start })
+        var closeStart = () => {
+          StartSel.style.display= "none"
+        }
+        btnCloseStart.addEventListener('click', () => {closeStart});
+    </script>
+    <script>
+      // Acerca de nuestras habilidades
+        const aboutMeSel = document.querySelector('.classAboutMe');
+        const btnAboutMe = document.getElementById('aboutMe');
+        const btnCloseAboutMe = document.getElementById('btnCloseAboutMe')
+
+        var about = () => {
+          aboutMeSel.style.display= "flex"
+        } 
+        btnAboutMe.addEventListener('click', () => {about})
+        var closeAboutMe = () => {
+          aboutMeSel.style.display= "none"
+        }
+        btnCloseAboutMe.addEventListener('click', () => {closeAboutMe});
+    </script>
+    <script>
+      // Contactos de la vida
+        const contactSel = document.querySelector('.classContact');
+        const btnContact = document.getElementById('contact');
+        const btnCloseContact = document.getElementById('btnCloseContact')
+
+        var contact = () => {
+          contactSel.style.display= "flex"
+        } 
+        btnContact.addEventListener('click', () => {contact})
+        var closeContact = () => {
+          contactSel.style.display= "none"
+        }
+        btnCloseContact.addEventListener('click', () => {closeContact});
+    </script>
+
 </body>
-<footer>
-  <h3><span>Autor:</span> Mercedes Bastardo</h3>
-</footer>
+
 </html>
